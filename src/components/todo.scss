@@ -1,0 +1,58 @@
+.item-wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: .5rem;
+
+  .left-wrapper{
+    border-bottom: 1px solid salmon;
+    max-width: 100%;
+    min-width: 300px;
+    display: flex;
+    flex: 4;
+    
+    .todo-title{
+      text-align: justify;
+      padding-left: 1rem;
+    }
+  
+    .radio{
+      width: 20px;
+      height: 20px;
+      border: 1px solid;
+      align-self: center;
+      border-radius: 20px;
+      display: flex;
+      cursor: pointer;
+
+    }
+  
+    .radio-clicked{
+      width: 15px;
+      height: 15px;
+      border: 1px solid salmon;
+      background-color: salmon;
+      justify-content: center;
+      align-self: center;
+      margin:auto;
+      border-radius: 15px;
+    }
+    
+  }
+
+  .icons{
+      display: flex;
+      align-items: center;
+      width: 90px;
+      
+      .trash{
+        padding:10px;
+        cursor: pointer;
+      }
+      .edit{
+        padding:10px;
+        cursor: pointer;
+
+      }
+    }
+}

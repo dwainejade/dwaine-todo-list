@@ -1,8 +1,9 @@
 Requirements:
 
 - Build a fully functioning todo list app using React
-  [] user can add todos
-  [] user can mark todos as done o user can edit todos
+  [x] user can add todos
+  [] user can mark todos as done
+  [] user can edit todos
   [] user can delete todos
   [x] This app should be available for cloning in a git repository
 
