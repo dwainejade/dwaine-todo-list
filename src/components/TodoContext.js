@@ -21,9 +21,24 @@ export const TodoProvider = (props) => {
         }
     ]);
 
+    // // localStorage
+    // const todoStorage = {
+    //     fetch: function () {
+    //         let todos = JSON.parse(localStorage.getItem('todo-app') || '[]')
+    //         todos.forEach(function (todo, index) {
+    //             todo.id = index
+    //         })
+    //         todoStorage.uid = todos.length
+    //         return todos
+    //     },
+    //     save: function (todos) {
+    //         localStorage.setItem('todo-app', JSON.stringify(todos))
+    //     }
+    // }
+
 
 
     return <TodoContext.Provider
-        value={[todos, setTodos, ]}
+        value={[todos, setTodos,]}
     >{props.children}</TodoContext.Provider>;
 };

@@ -9,9 +9,13 @@ import "./App.css";
 function App() {
   return (
     <TodoProvider>
-      <div className="App">
-        <h1 className="app-title">Todo App</h1>
-        <TodoList></TodoList>
+      <div className="app-wrapper">
+    
+          <div className="app-title">
+            <p>TODO</p>
+          </div>
+          <TodoList></TodoList>
+
       </div>
     </TodoProvider>
   );
