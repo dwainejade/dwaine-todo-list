@@ -1,7 +1,29 @@
 .App {
   text-align: center;
+  font-family: "Poppins";
+  background-color: ghostwhite;
+  max-width: 600px;
+  margin: auto;
+  min-height: 90vh;
+}
+
+.app-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: salmon;
 }
 
 ul {
   list-style: none;
+}
+
+input {
+  height: 30px;
+  width: 300px;
+}
+
+button {
+  padding: 8px;
+  font-size: 1rem;
+  font-weight: 700;
 }
