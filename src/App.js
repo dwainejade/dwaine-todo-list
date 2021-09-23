@@ -7,13 +7,10 @@ import TodoList from "./components/TodoList";
 import "./App.css";
 
 function App() {
-
-
-
   return (
     <TodoProvider>
       <div className="App">
-        <h1>Todo List</h1>
+        <h1 className="app-title">Todo App</h1>
         <TodoList></TodoList>
       </div>
     </TodoProvider>
