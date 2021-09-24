@@ -13,6 +13,7 @@ View in [codesandbox](https://codesandbox.io/s/jolly-panka-lptix)
 4. user can mark todos as done
 5. user can show or hide completed todos
 6. todos are saved in localStorage and remain on refresh
+7. the list container's height is fixed and scrollable
 
 ### Missing Features
 1. no backend used
