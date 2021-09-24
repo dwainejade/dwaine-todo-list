@@ -4,22 +4,42 @@
   width: 100%;
   padding: 0.5rem;
 }
+
 .text {
   color: #293241;
 }
+
 .left-wrapper {
-  border-bottom: 1px solid #98C1D9;
+  border-bottom: 1px solid #98c1d9;
   max-width: 100%;
   min-width: 300px;
   display: flex;
   flex: 4;
-}
-.todo-title {
-  text-align: justify;
-  padding-left: 1rem;
+  align-items: center;
 }
 
-.radio {
+@keyframes strike {
+  from {
+    text-decoration-color: transparent;
+    color: #293241;
+  }
+  to {
+    text-decoration-color: auto;
+    color: silver;
+  }
+}
+.strike {
+  text-decoration: line-through;
+  animation: strike 0.4s linear;
+  color: silver;
+}
+
+/* .todo-title {
+  text-align: center;
+  padding-left: 2rem;
+} */
+
+/* .radio {
   width: 20px;
   height: 20px;
   border: 1px solid;
@@ -38,6 +58,11 @@
   align-self: center;
   margin: auto;
   border-radius: 15px;
+} */
+
+.checkbox {
+  cursor: pointer;
+  padding-right: 10px;
 }
 
 .icons {
@@ -60,6 +85,6 @@ input {
   transition: padding 0.3s 0.2s ease;
 }
 
-input:focus{
+input:focus {
   outline: none;
 }

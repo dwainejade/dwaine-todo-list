@@ -10,14 +10,13 @@ import "./todo.css";
 import { TodoContext } from "./TodoContext";
 
 export default function Todo({ todo }) {
-  const [todos, setTodos] = useContext(TodoContext);
+  const [todos, setTodos, storage, setStorage] = useContext(TodoContext);
   const [input, setInput] = useState(todo.text);
 
   const markComplete = (id) => {
     todos.map((todo) => {
       if (todo.id === id) {
         todo.completed = !todo.completed;
-        console.log("done", todo);
       }
       return todo;
     });
@@ -69,22 +68,23 @@ export default function Todo({ todo }) {
         </div>
       ) : (
         <div className="item-wrapper">
-          <div
-            className="left-wrapper"
-
-            // style={{ border: "1px solid", width: "500px", margin: "20px auto" }}
-          >
-            <div onClick={() => markComplete(todo.id)}>
-              {todo.completed ? (
+          {todo.completed ? (
+            <div className="left-wrapper">
+              <div onClick={() => markComplete(todo.id)}>
                 <FaRegCheckCircle className="checkbox" size={20} />
-              ) : (
-                <FaRegCircle className="empty-checkbox" size={20} />
-              )}
+              </div>
+              <p className="strike">{todo.text}</p>
             </div>
-            <p className="text">{todo.text}</p>
-            {/* <p>id: {todo.id}</p> */}
-            {/* <p>completed: {todo.completed.toString()}</p> */}
-          </div>
+          ) : (
+            <div className="left-wrapper">
+              <div onClick={() => markComplete(todo.id)}>
+                <FaRegCircle className="checkbox" size={20} />
+              </div>
+              <p className="text">{todo.text}</p>
+            </div>
+          )}
+          {/* <p>id: {todo.id}</p> */}
+          {/* <p>completed: {todo.completed.toString()}</p> */}
           <div className="icons">
             <FaEdit
               className="edit"
