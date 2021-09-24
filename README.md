@@ -1,18 +1,21 @@
-###Feature List
+
+## React Todo App
+View in [codesandbox]()
+
+### Build Instructions
+1. npm install
+2. npm start
+=======
+
+
+### Feature List
 1. user can add todos
 2. user can delete todos
-3. This app should be available for cloning in a git repository
+3. user can edit todos
 4. user can mark todos as done
-5. user can edit todos
+5. user can show or hide completed todos
+6. todos are saved in localStorage and remain on refresh
 
-- A README.md file should be included with directions on how to build the application,
-  feature list, features that are missing, etc.
-- State management solution (context API preferred, but not required)
-- Responsive design
 
-###Bonus Points:
-- Use React hooks
-- Animation/transitions
-- Backend/database of your choice
-- Incorporate Typescript
-- Extra features of your choice
+### Missing Features
+1. no backend used

@@ -41,17 +41,20 @@ function TodoList() {
         />
         <span className="slider round"></span>
       </label>
-      {showCompleted
-        ? todos.map((todo) => <Todo todo={todo} key={todo.id} />)
-        : todos
+      <div className="list-container">
+        {showCompleted
+          ? todos.map((todo) => <Todo todo={todo} key={todo.id} />)
+          : todos
             .filter((todo) => todo.completed === false)
             .map((todo) => <Todo todo={todo} key={todo.id} />)}
+      </div>
       <div className="bottom-wrapper">
         <form className="input-form">
           <input
             autoFocus
             id="add-todo"
             type="text"
+            placeholder="Add Todo"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
