@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { useContext } from "react/cjs/react.development";
 import Todo from "./Todo";
 import { TodoContext } from "./TodoContext";
+import { FaPlusCircle } from "react-icons/fa";
 
 function TodoList() {
   const [todos, setTodos] = useContext(TodoContext);
   const [input, setInput] = useState("");
-  const [showCompleted, setShowCompleted] = useState(true);
+  const [showCompleted, setShowCompleted] = useState(false);
 
   function newTodo(text) {
     return { text, id: Date.now(), completed: false };
@@ -14,27 +15,44 @@ function TodoList() {
 
   const addTodo = (e) => {
     e.preventDefault();
-    setTodos([...todos, newTodo(input)]);
+    const text = input.trim();
+    if (text) {
+      setTodos([...todos, newTodo(text)]);
+      console.log("todo added: ", todos);
+    }
     setInput("");
-    console.log("todo added: ", todos);
+  };
+
+  const handleShowCompleted = () => {
+    setShowCompleted(!showCompleted);
   };
 
   const newTodos = todos.filter((todo) => todo.completed === false);
 
   return (
-    <div>
+    <div className="list-wrapper">
+      <label class="switch">
+        <input
+          type="checkbox"
+          defaultChecked={showCompleted}
+          onChange={handleShowCompleted}
+        />
+        <span class="slider round"></span>
+      </label>
       {showCompleted
         ? todos.map((todo) => <Todo todo={todo} key={todo.id} />)
         : newTodos.map((todo) => <Todo todo={todo} key={todo.id} />)}
-      <form>
+      <form className="input-form">
         <input
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button onClick={addTodo} disabled={!input}>
-          +
-        </button>
+        <span>
+          <button onClick={addTodo} disabled={!input}>
+            <FaPlusCircle className="plus" size={32} />
+          </button>
+        </span>
       </form>
     </div>
   );

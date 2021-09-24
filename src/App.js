@@ -9,9 +9,7 @@ function App() {
   return (
     <TodoProvider>
       <div className="app-wrapper">
-        <div className="app-title">
-          <p>TODO</p>
-        </div>
+        <div className="app-title">TODO</div>
         <TodoList></TodoList>
       </div>
     </TodoProvider>

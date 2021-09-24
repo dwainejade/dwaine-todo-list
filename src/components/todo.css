@@ -1,3 +1,6 @@
+.app-wrapper {
+}
+
 .item-wrapper {
   display: flex;
   justify-content: space-between;
@@ -12,7 +15,7 @@
 .left-wrapper {
   border-bottom: 1px solid #98c1d9;
   max-width: 100%;
-  min-width: 300px;
+  min-width: 100px;
   display: flex;
   flex: 4;
   align-items: center;
@@ -34,31 +37,24 @@
   color: silver;
 }
 
-/* .todo-title {
-  text-align: center;
-  padding-left: 2rem;
-} */
-
-/* .radio {
-  width: 20px;
-  height: 20px;
-  border: 1px solid;
-  align-self: center;
-  border-radius: 20px;
-  display: flex;
+button {
+  background-color: white;
+  border: none;
   cursor: pointer;
 }
 
-.radio-clicked {
-  width: 15px;
-  height: 15px;
-  border: 1px solid salmon;
-  background-color: salmon;
-  justify-content: center;
-  align-self: center;
-  margin: auto;
-  border-radius: 15px;
-} */
+.input-form {
+  display: flex;
+  bottom: 10px;
+  max-width: 300px;
+}
+input {
+  width: 100%;
+}
+
+.plus {
+  /* display: absolute; */
+}
 
 .checkbox {
   cursor: pointer;
