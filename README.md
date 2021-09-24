@@ -1,9 +1,12 @@
+
 ## React Todo App
-View in [codesandbox](http://a.com)
+View in [codesandbox]()
 
 ### Build Instructions
 1. npm install
 2. npm start
+=======
+
 
 ### Feature List
 1. user can add todos
@@ -12,6 +15,7 @@ View in [codesandbox](http://a.com)
 4. user can mark todos as done
 5. user can show or hide completed todos
 6. todos are saved in localStorage and remain on refresh
+
 
 ### Missing Features
 1. no backend used
