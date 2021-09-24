@@ -24,29 +24,32 @@ function TodoList() {
   };
 
   const handleShowCompleted = () => {
+    const incompleteTodos = todos.filter((todo) => todo.completed === false);
+    const completedTodos = todos.filter((todo) => todo.completed === true);
+    const allTodos = incompleteTodos.concat(completedTodos);
+    setTodos(allTodos);
     setShowCompleted(!showCompleted);
   };
 
-  const incompleteTodos = todos.filter((todo) => todo.completed === false);
-  const completedTodos = todos.filter((todo) => todo.completed === true);
-  const allTodos = incompleteTodos.concat(completedTodos);
-
   return (
-    <div className="list-wrapper">
-      <label class="switch">
+    <div>
+      <label className="switch">
         <input
           type="checkbox"
           defaultChecked={showCompleted}
           onChange={handleShowCompleted}
         />
-        <span class="slider round"></span>
+        <span className="slider round"></span>
       </label>
       {showCompleted
-        ? allTodos.map((todo) => <Todo todo={todo} key={todo.id} />)
-        : incompleteTodos.map((todo) => <Todo todo={todo} key={todo.id} />)}
+        ? todos.map((todo) => <Todo todo={todo} key={todo.id} />)
+        : todos
+            .filter((todo) => todo.completed === false)
+            .map((todo) => <Todo todo={todo} key={todo.id} />)}
       <div className="bottom-wrapper">
         <form className="input-form">
           <input
+            autoFocus
             id="add-todo"
             type="text"
             value={input}

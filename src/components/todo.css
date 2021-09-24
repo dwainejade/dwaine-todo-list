@@ -29,6 +29,7 @@
     color: silver;
   }
 }
+
 .strike {
   text-decoration: line-through;
   animation: strike 0.2s linear;
@@ -43,23 +44,25 @@ button {
 
 .bottom-wrapper {
   display: inline-block;
-  align-content: center;
+  align-items: center;
+  width: 100%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* border: 1px solid orange; */
 }
 
 .input-form {
-  display: absolute;
-  /* margin: 25px; */
+  display: flex;
+  /* max-width: 100%; */
   margin-top: 3rem;
   margin-bottom: 1rem;
+  /* border: 1px solid orange; */
 }
 
 form {
   display: flex;
-  align-items: center;
-  /* border: 1px solid; */
+  justify-content: center;
 }
 
 .checkbox {
@@ -70,7 +73,7 @@ form {
 .icons {
   display: flex;
   align-items: center;
-  width: 90px;
+  /* width: 90px; */
 }
 .trash {
   padding: 10px;
@@ -107,11 +110,11 @@ input:focus {
 }
 
 #add-todo {
-  min-width: 100%;
   align-items: center;
   border-radius: 6px;
   padding: 12px;
   font-size: 1rem;
+  width: 80%;
   background-color: rgba(98, 98, 98, 0.161);
   /* border:1px solid orange; */
 }

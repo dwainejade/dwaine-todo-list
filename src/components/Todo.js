@@ -62,10 +62,13 @@ export default function Todo({ todo }) {
             <input
               id="edit-input"
               type="text"
+              autoFocus
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />
-            <FaSave onClick={handleSave} size={30} />
+            <button onClick={handleSave}>
+              <FaSave size={30} />
+            </button>
           </form>
         </div>
       ) : (
