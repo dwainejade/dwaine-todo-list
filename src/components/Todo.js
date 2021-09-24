@@ -3,7 +3,8 @@ import {
   FaEdit,
   FaTrashAlt,
   FaRegCheckCircle,
-  FaRegCircle
+  FaRegCircle,
+  FaSave
 } from "react-icons/fa";
 import { useContext } from "react/cjs/react.development";
 import "./todo.css";
@@ -57,13 +58,14 @@ export default function Todo({ todo }) {
     <div className="todo-wrapper">
       {todo.edit ? (
         <div>
-          <form>
+          <form className="input-form-edit">
             <input
+              id="edit-input"
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
             />
-            <button onClick={handleSave}>Save</button>
+            <FaSave onClick={handleSave} size={30} />
           </form>
         </div>
       ) : (

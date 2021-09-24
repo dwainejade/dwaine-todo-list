@@ -1,6 +1,3 @@
-.app-wrapper {
-}
-
 .item-wrapper {
   display: flex;
   justify-content: space-between;
@@ -10,6 +7,7 @@
 
 .text {
   color: #293241;
+  font-size: 1rem;
 }
 
 .left-wrapper {
@@ -33,7 +31,7 @@
 }
 .strike {
   text-decoration: line-through;
-  animation: strike 0.4s linear;
+  animation: strike 0.2s linear;
   color: silver;
 }
 
@@ -43,17 +41,25 @@ button {
   cursor: pointer;
 }
 
-.input-form {
+.bottom-wrapper {
+  display: inline-block;
+  align-content: center;
+  margin: 0 auto;
   display: flex;
-  bottom: 10px;
-  max-width: 300px;
-}
-input {
-  width: 100%;
+  justify-content: space-around;
 }
 
-.plus {
-  /* display: absolute; */
+.input-form {
+  display: absolute;
+  /* margin: 25px; */
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid; */
 }
 
 .checkbox {
@@ -82,5 +88,30 @@ input {
 }
 
 input:focus {
+  /* text-align: center; */
   outline: none;
+}
+
+.input-form-edit {
+  /* padding: 20px 10px ; */
+  width: 100%;
+  align-items: center;
+}
+
+#edit-input {
+  width: 80%;
+  padding: 26px;
+  font-size: 1rem;
+  font-family: "Poppins";
+  /* border: 1px solid grey */
+}
+
+#add-todo {
+  min-width: 100%;
+  align-items: center;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: rgba(98, 98, 98, 0.161);
+  /* border:1px solid orange; */
 }

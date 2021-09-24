@@ -1,10 +1,10 @@
 .app-wrapper {
-  border-radius: 20px;
+  border-radius: 15px;
   border: 1px solid white;
   padding: 1.2rem;
   max-width: 500px;
   /* come back to thiis put scroll or delete */
-  max-height: 80vh;
+  /* max-height: 80vh; */
   margin: 2rem auto;
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
@@ -16,21 +16,6 @@
   font-weight: 500;
   color: #ee6c4d;
   margin: 1rem 0;
-}
-
-ul {
-  list-style: none;
-}
-
-input {
-  height: 30px;
-  width: 300px;
-}
-
-button {
-  padding: 8px;
-  font-size: 1rem;
-  font-weight: 700;
 }
 
 /* The switch - the box around the slider */
@@ -74,11 +59,11 @@ button {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #3d5a80;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 1px #3d5a80;
 }
 
 input:checked + .slider:before {
