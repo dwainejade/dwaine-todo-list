@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
 
 .text {
@@ -55,7 +55,7 @@ button {
 .input-form {
   display: flex;
   /* max-width: 100%; */
-  margin-top: 3rem;
+
   margin-bottom: 1rem;
   /* border: 1px solid orange; */
 }
@@ -118,3 +118,18 @@ input:focus {
   background-color: rgba(98, 98, 98, 0.161);
   /* border:1px solid orange; */
 }
+
+.list-container {
+  height: 50vh;
+  overflow: auto;
+  overflow-x: hidden;
+  background-color: rgba(98, 98, 98, 0.161);
+  padding: 10px;
+  border: 1px solid silver;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* .list-container::-webkit-scrollbar {
+  display: none;
+} */

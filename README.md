@@ -6,6 +6,8 @@
 [x] This app should be available for cloning in a git repository
 [x] user can mark todos as done
 [x] user can edit todos
+[] tasks left
+
 
 - A README.md file should be included with directions on how to build the application,
   feature list, features that are missing, etc.
